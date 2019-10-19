@@ -1,0 +1,65 @@
+/* fonts
+font-family: 'Roboto', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto Slab', serif;
+*/
+body {
+font-family: 'Montserrat', sans-serif;
+}
+ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* header*/
+.logo a {
+font-size: 24px;
+color: white;
+}
+.logo a:hover {
+  text-decoration: none;
+}
+.menu__item a {
+  font-size: 14px;
+  color: white;
+}
+.menu__item a:hover {
+  text-decoration: none;
+}
+
+.menu__item {
+  margin: 0 15px 0 15px;
+}
+.menu-bar {
+  color: white;
+  background-image: url(../img/header.png);
+  text-align: center;
+  background-size: cover;
+  background-position: 50% 100% ;
+  padding-top: 40px;
+}
+.head__prev {
+  padding: 260px 0;
+}
+.head__title {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.head__text {
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  margin-bottom: 55px;
+}
+
+.button {
+  font-size: 16px;
+  background: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 18px 44px;
+  color: white;
+  transition: 0.3s;
+  border: 5px solid white;
+}
