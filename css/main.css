@@ -53,7 +53,7 @@ color: white;
   margin-bottom: 55px;
 }
 
-.button {
+.button-start {
   font-size: 16px;
   background: transparent;
   text-transform: uppercase;
@@ -108,18 +108,68 @@ padding-bottom: 100px;
 text-align: center;
 color: #555555;
 }
-
 .about__text {
   font-family: 'Roboto Slab', serif;
   font-size: 14px;
   padding-bottom: 70px;
 }
-
 /*slider*/
-
 .about__text__slider {
   font-family: 'Roboto Slab', serif;
   font-size: 13px;
 }
-
 /* нужно доделать оформление и соцсети */
+
+/* works*/
+.portfolio {
+padding-top: 100px;
+padding-bottom: 60px;
+text-align: center;
+color: #555555;
+}
+
+.button {
+  margin-top: 60px;
+  margin-bottom: 70px;
+  padding-right: 30px;
+  background: white;
+  border: none;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.portfolio button:hover,
+.focused {
+   background: transparent;
+   color: #c0301c;
+}
+.portfolio img {
+   max-width: 100%;
+   margin-bottom: 30px;
+}
+
+.filter {
+   padding: 100px 0;
+}
+
+div[filter]:hover img {
+   filter: brightness(50%);
+   transition: 0.3s;
+   color: #c4645b;
+}
+
+.text {
+   display: none;
+}
+
+div[filter]:hover .text {
+   display: block;
+   width: 100%;
+   color: #fff;
+   position: absolute;
+   top: 40%;
+   left: 0;
+   z-index: 3;
+   text-align: center;
+}
