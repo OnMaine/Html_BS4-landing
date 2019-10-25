@@ -58,10 +58,20 @@ color: white;
   background: transparent;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 18px 44px;
+  width: 170px;
+  height: 50px;
   color: white;
   transition: 0.3s;
-  border: 5px solid white;
+  border: 3px solid white;
+
+}
+
+.button-start:hover {
+  color: #c0301c;
+  background-color: white;
+  font-weight: bold;
+  transition: 0.5s;
+  font-family: 'Roboto Slab', serif;
 }
 
 /* services*/
@@ -87,7 +97,7 @@ color: #555555;
   color: #c0301c;
   font-size: 70px;
 }
-
+/*About*/
 .about__h3 {
   padding-top: 30px;
   padding-bottom: 25px;
@@ -100,11 +110,10 @@ color: #555555;
   padding-bottom: 100px;
   font-size: 14px;
 }
-/*About*/
+
 .about {
 background-color: #f8f8f8;
-padding-top: 100px;
-padding-bottom: 100px;
+padding: 100px 0;
 text-align: center;
 color: #555555;
 }
@@ -149,10 +158,6 @@ color: #555555;
    margin-bottom: 30px;
 }
 
-.filter {
-   padding: 100px 0;
-}
-
 div[filter]:hover img {
    filter: brightness(50%);
    transition: 0.3s;
@@ -172,4 +177,173 @@ div[filter]:hover .text {
    left: 0;
    z-index: 3;
    text-align: center;
+}
+/*touch*/
+.touch {
+  background-image: url(../img/section.png);
+  background-size: cover;
+  background-position: 50% 100% ;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.touch__title {
+  margin-bottom: 50px;
+  color: white;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+/* blog*/
+.blog {
+  padding: 100px 0;
+}
+.blog-head {
+    text-align: center;
+}
+
+.blog-elem {
+  text-align: left;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #dddddd;
+}
+.blog-data {
+  padding-top: 50px 0;
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  border: solid 2px #555555;
+  margin-right: 30px;
+  margin-bottom: 20px;
+
+}
+.blog-data h3 {
+  font-size: 24px;
+  padding-top: 10px;
+  margin: 0;
+}
+.blog-data p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.blog-text h4{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555555;
+}
+
+.blog-text p, a {
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: #555555;
+}
+
+.more {
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  color: #555555;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.blog-about p {
+  font-size: 14px;
+}
+
+.blog-about:hover a {
+  text-decoration: none;
+ color: #c0301c;
+}
+.blog-about:hover h4 {
+  text-decoration: none;
+ color: #c0301c;
+}
+/*media*/
+.about2 {
+  color: black;
+  padding-bottom: 500px;
+  background-color: green;
+}
+
+.media_text  {
+  text-align: center;
+  font-style: italic;
+    color: #555555;
+}
+.media_text h3 {
+  font-size: 18px;
+}
+.media_text p {
+  font-size: 20px;
+  padding: 45px 0;
+}
+
+#media img {
+  padding: 0 0 70px 50px;
+}
+/* доделать красный индикатор */
+
+/* contact*/
+.contact-block {
+  text-align: left;
+  color: #555555;
+
+}
+.contact-block p{
+  font-size: 12px;
+}
+.contact-block h3{
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contact-icon {
+  font-size: 20px;
+  width: 15px;
+  height: 20px;
+  margin-right: 20px;
+}
+
+.form-control {
+  margin-right: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #555555;
+}
+
+.forma> div {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.contact-button {
+    margin-right: 35px;
+    width: 170px;
+    height: 40px;
+    background: white;
+    border: none;
+    font-family: 'Roboto Slab', serif;
+    font-size: 12px;
+    border: 1px solid #555555;
+    text-transform: uppercase;
+}
+
+/*footer*/
+.footer {
+  padding: 100px 0;
+  background-color: #c0301c;
+}
+
+.footer-icon {
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 70px;
+  color: white;
+}
+.footer-text h3 {
+  font-size: 12px;
+  color: white;
+  text-align: center;
 }
