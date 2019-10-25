@@ -234,7 +234,7 @@ div[filter]:hover .text {
   color: #555555;
 }
 
-.blog-text p, a {
+.blog-text p, .blog-text a {
   font-family: 'Roboto Slab', serif;
   font-size: 13px;
   font-style: italic;
