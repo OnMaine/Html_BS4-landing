@@ -63,7 +63,7 @@ color: white;
   color: white;
   transition: 0.3s;
   border: 3px solid white;
-
+  cursor: pointer;
 }
 
 .button-start:hover {
@@ -72,6 +72,7 @@ color: white;
   font-weight: bold;
   transition: 0.5s;
   font-family: 'Roboto Slab', serif;
+  cursor: pointer;
 }
 
 /* services*/
@@ -146,12 +147,14 @@ color: #555555;
   font-family: 'Roboto Slab', serif;
   font-size: 16px;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .portfolio button:hover,
 .focused {
    background: transparent;
    color: #c0301c;
+   cursor: pointer;
 }
 .portfolio img {
    max-width: 100%;
@@ -328,6 +331,7 @@ div[filter]:hover .text {
     font-size: 12px;
     border: 1px solid #555555;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 /*footer*/
@@ -346,4 +350,45 @@ div[filter]:hover .text {
   font-size: 12px;
   color: white;
   text-align: center;
+}
+
+/*adaptive */
+.menu-icon {
+display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    display: none;
+  }
+  .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  }
+  .menu-icon {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: block;
+  }
+  .logo a {
+    font-size: 35px;
+  }
+  .head__prev {
+    padding: 100px 0 ;
+  }
+  .head__title {
+    font-size: 30px;
+  }
+  .head__text {
+    font-size: 20px;
+  }
+  .blog-item {
+    margin-bottom: 20px;
+  }
 }
