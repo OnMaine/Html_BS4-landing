@@ -1,8 +1,4 @@
-/* fonts
-font-family: 'Roboto', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto Slab', serif;
-*/
+/* Main settings */
 body {
 font-family: 'Montserrat', sans-serif;
 }
@@ -12,23 +8,36 @@ ul, li {
   margin: 0;
 }
 
-/* header*/
-.logo a {
-font-size: 24px;
-color: white;
-}
-.logo a:hover {
-  text-decoration: none;
-}
-.menu__item a {
-  font-size: 14px;
-  color: white;
-}
-.menu__item a:hover {
-  text-decoration: none;
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
-.menu__item {
+h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+.text-casual {
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+}
+.title-casual {
+  font-size: 16px;
+  padding: 50px 0 70px;
+  font-family: 'Roboto Slab', serif;
+}
+/* logo*/
+
+.logo {
+font-size: 24px;
+color: white;
+font-weight: bold;
+}
+
+/* Navigation */
+.menu-item {
   margin: 0 15px 0 15px;
 }
 .menu-bar {
@@ -39,15 +48,28 @@ color: white;
   background-position: 50% 100% ;
   padding-top: 40px;
 }
-.head__prev {
-  padding: 260px 0;
+.menu-item a {
+  font-size: 14px;
+  color: white;
 }
-.head__title {
-  font-size: 48px;
-  text-transform: uppercase;
+.menu-item a:hover {
+  text-decoration: none;
+  color: #c0301c;
+  transition: 1s;
 }
 
-.head__text {
+/* header */
+.head-prev {
+  padding: 125px 0;
+  margin: 125px 0;
+}
+.head-title {
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.head-text {
   font-family: 'Roboto Slab', serif;
   font-size: 20px;
   margin-bottom: 55px;
@@ -75,65 +97,80 @@ color: white;
   cursor: pointer;
 }
 
-/* services*/
+/* Section services*/
 .services {
 padding-top: 100px;
 padding-bottom: 70px;
 text-align: center;
 color: #555555;
 }
-.services__title {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 20px;
-}
-.services__text {
-  font-size: 16px;
-  padding-top: 50px;
-  padding-bottom: 70px;
-  font-family: 'Roboto Slab', serif;
-}
 
 .icon {
   color: #c0301c;
-  font-size: 70px;
+  font-size: 50px;
 }
+
+.circle {
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: white;
+   width: 90px;
+   height: 90px;
+   margin: 0 auto 35px;
+   border: 1px solid #dddddd;
+}
+.services-box {
+    padding-bottom: 30px;
+}
+
+.services-box:hover .circle {
+  background: #c0301c;
+  border-radius: 1px solid #dddddd;
+  transition: 1s;
+}
+.services-box:hover .icon {
+  color: white;
+  transition: 1s;
+}
+
 /*About*/
-.about__h3 {
-  padding-top: 30px;
-  padding-bottom: 25px;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-.about__text {
-  font-family: 'Roboto Slab', serif;
-  padding-bottom: 100px;
-  font-size: 14px;
-}
-
 .about {
 background-color: #f8f8f8;
 padding: 100px 0;
 text-align: center;
 color: #555555;
 }
-.about__text {
-  font-family: 'Roboto Slab', serif;
-  font-size: 14px;
+
+.about-inform {
   padding-bottom: 70px;
 }
-/*slider*/
-.about__text__slider {
-  font-family: 'Roboto Slab', serif;
-  font-size: 13px;
+.about-spase {
+  padding: 30px 0 25px;
 }
-/* нужно доделать оформление и соцсети */
 
-/* works*/
+/* slider controller */
+.control-icon {
+font-size: 35px;
+}
+
+.control-box {
+  width: 35px;
+  height: 40px;
+}
+.carousel-control-next, .carousel-control-prev {
+    width: 3%;
+    position: absolute;
+    top: 0;
+    bottom: 100px;
+}
+.carousel-control-next:hover .control-box,.carousel-control-prev:hover .control-box {
+  background-color: #c0301c;
+}
+/* portfolio ( buttons + image)*/
 .portfolio {
-padding-top: 100px;
-padding-bottom: 60px;
+padding: 100px 0 70px;
 text-align: center;
 color: #555555;
 }
@@ -167,11 +204,11 @@ div[filter]:hover img {
    color: #c4645b;
 }
 
-.text {
+.portfolio-text {
    display: none;
 }
 
-div[filter]:hover .text {
+div[filter]:hover .portfolio-text {
    display: block;
    width: 100%;
    color: #fff;
@@ -181,7 +218,7 @@ div[filter]:hover .text {
    z-index: 3;
    text-align: center;
 }
-/*touch*/
+/*section touch*/
 .touch {
   background-image: url(../img/section.png);
   background-size: cover;
@@ -190,13 +227,13 @@ div[filter]:hover .text {
   text-align: center;
 }
 
-.touch__title {
+.touch-title {
   margin-bottom: 50px;
   color: white;
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
 }
-/* blog*/
+/* section blog*/
 .blog {
   padding: 100px 0;
 }
@@ -220,14 +257,10 @@ div[filter]:hover .text {
   margin-bottom: 20px;
 
 }
-.blog-data h3 {
+.blog-data h4 {
   font-size: 24px;
   padding-top: 10px;
   margin: 0;
-}
-.blog-data p {
-  margin: 0;
-  font-size: 14px;
 }
 
 .blog-text h4{
@@ -251,44 +284,40 @@ div[filter]:hover .text {
   text-transform: uppercase;
   font-weight: bold;
 }
-.blog-about p {
-  font-size: 14px;
+
+.blog-elem:hover a, .blog-elem:hover h4 {
+  text-decoration: none;
+ color: #c0301c;
 }
 
-.blog-about:hover a {
-  text-decoration: none;
- color: #c0301c;
-}
-.blog-about:hover h4 {
-  text-decoration: none;
- color: #c0301c;
-}
-/*media*/
+/* section media*/
 .about2 {
   color: black;
   padding-bottom: 500px;
   background-color: green;
 }
 
-.media_text  {
+.media-text  {
   text-align: center;
   font-style: italic;
-    color: #555555;
+  color: #555555;
 }
-.media_text h3 {
+.media-text h4 {
   font-size: 18px;
+  padding-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
 }
-.media_text p {
+.media-text p {
   font-size: 20px;
-  padding: 45px 0;
+  font-family: 'Roboto Slab', serif;
 }
 
 #media img {
   padding: 0 0 70px 50px;
 }
-/* доделать красный индикатор */
 
-/* contact*/
+/* section contact*/
 .contact-block {
   text-align: left;
   color: #555555;
@@ -297,11 +326,7 @@ div[filter]:hover .text {
 .contact-block p{
   font-size: 12px;
 }
-.contact-block h3{
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+
 
 .contact-icon {
   font-size: 20px;
@@ -316,11 +341,10 @@ div[filter]:hover .text {
   border: 1px solid #555555;
 }
 
-.forma> div {
+.form-control {
   font-size: 12px;
   text-transform: uppercase;
 }
-
 .contact-button {
     margin-right: 35px;
     width: 170px;
@@ -345,14 +369,24 @@ div[filter]:hover .text {
   padding: 10px;
   margin-bottom: 70px;
   color: white;
+  border: 1px solid white;
+  border-radius: 50%;
 }
-.footer-text h3 {
-  font-size: 12px;
+.footer-text {
   color: white;
   text-align: center;
+  font-weight: normal;
+    font-family: 'Roboto Slab', serif;
+}
+.footer-icon-box{
+  display: flex;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  margin: 0 auto 15px;
 }
 
-/*adaptive */
+/*adaptive  */
 .menu-icon {
 display: none;
 }
@@ -379,13 +413,13 @@ display: none;
   .logo a {
     font-size: 35px;
   }
-  .head__prev {
+  .head-prev {
     padding: 100px 0 ;
   }
-  .head__title {
+  .head-title {
     font-size: 30px;
   }
-  .head__text {
+  .head-text {
     font-size: 20px;
   }
   .blog-item {
