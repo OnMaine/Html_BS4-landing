@@ -34,3 +34,28 @@ $('.menu-icon').click(function() {
     $(this).html('<i class="fas fa-bars"></i>');
   }
 });
+
+
+//Navigation line
+let marker = document.querySelector('#marker');
+let item = document.querySelectorAll('nav a');
+
+function indicator(e) {
+  marker.style.left = e.offsetLeft + "px";
+  marker.style.width = e.offsetWidth + "px";
+}
+
+item.forEach(link => {
+  link.addEventListener('mouseover', (e)=>{
+    indicator(e.target);
+  })
+});
+
+
+// header text paralax
+//
+// let text = document.getElementById('text');
+// window.addEventListener('scroll', function() {
+//   let value = window.scrollY;
+//   text.style.marginBottom = value * 2 + 'px' ;
+// })
