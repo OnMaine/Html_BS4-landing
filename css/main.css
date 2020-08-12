@@ -197,7 +197,7 @@ nav #marker {
 
 /*About*/
 .about {
-  background-color: #f8f8f8;
+  background: linear-gradient(to right, #dbdde1, #ffffff);
   padding: 100px 0;
   text-align: center;
   color: #555555;
@@ -211,25 +211,143 @@ nav #marker {
   padding: 30px 0 25px;
 }
 
-/* slider controller */
-.control-icon {
-  font-size: 35px;
+.about-card {
+  padding: 5px;
 }
 
-.control-box {
-  width: 35px;
-  height: 40px;
+.img-wrapper
+{
+	position: relative;
+	overflow: hidden;
 }
 
-.carousel-control-next, .carousel-control-prev {
-  width: 3%;
-  position: absolute;
-  top: 0;
-  bottom: 100px;
+.img-wrapper:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 180%;
+	height: 100%;
+	width: 100%;
+	background: rgba(255,255,255,.3);
+	z-index: 1;
+	transform: skew(45deg);
+	transition: .5s;
 }
 
-.carousel-control-next:hover .control-box, .carousel-control-prev:hover .control-box {
-  background-color: #c0301c;
+.img-wrapper:hover:before
+{
+	left: -180%;
+}
+
+.img-wrapper img
+{
+	height: 370px;
+	width: 270px;
+	filter: grayscale(100%);
+	transition: 2s;
+}
+.img-wrapper:hover img
+{
+	filter: grayscale(0%);
+	transform: scale(1.1);
+}
+
+.img-wrapper h2
+{
+	background: tomato;
+	font-family: Poppins;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 10px 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	transform: perspective(400px) rotateY(90deg);
+	transform-origin: right;
+	transition: 1s;
+}
+
+.img-wrapper p
+{
+	font-family: Poppins;
+  color: #000;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.img-wrapper:hover h2
+{
+	transform: perspective(400px) rotateY(0deg);
+}
+
+.img-wrapper ul
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: rgba(255,255,255,0);
+}
+
+.img-wrapper ul li
+{
+	background: #333;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	transform: perspective(800px) rotateY(90deg);
+	transition: .5s;
+	transform-origin: left;
+}
+
+.img-wrapper:hover ul li
+{
+	transform: perspective(800px) rotateY(0deg);
+}
+
+.img-wrapper:hover ul li:nth-child(1)
+{
+	transition-delay: .2s;
+}
+
+.img-wrapper:hover ul li:nth-child(2)
+{
+	transition-delay: .6s;
+}
+
+.img-wrapper:hover ul li:nth-child(3)
+{
+	transition-delay: .8s;
+}
+
+.img-wrapper:hover ul li:nth-child(4)
+{
+	transition-delay: 1s;
+}
+
+.img-wrapper ul li a
+{
+	color: tomato;
+	background: rgba(255,255,255,0);
+}
+
+.img-wrapper ul li i
+{
+	color: tomato;
+	background: rgba(255,255,255,0);
+}
+
+.img-wrapper ul li i:hover
+{
+	color: #fff;
+	background: rgba(255,255,255,0);
 }
 
 /* portfolio ( buttons + image)*/
