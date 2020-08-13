@@ -6,27 +6,42 @@ ul, li {
   list-style-type: none;
 }
 
-h2 {
+h1,
+h2,
+h3 {
   font-weight: bold;
   text-transform: uppercase;
+}
+
+h2 {
   font-size: 20px;
 }
 
 h3 {
-  text-transform: uppercase;
   font-size: 14px;
-  font-weight: bold;
 }
 
-.text-casual {
+.text-common-settings,
+.titles {
   font-family: 'Roboto Slab', serif;
+}
+
+.text-common-settings {
   font-size: 14px;
 }
 
-.title-casual {
+.titles {
   font-size: 16px;
-  padding: 50px 0 70px;
-  font-family: 'Roboto Slab', serif;
+  padding: 50px 0 50px;
+}
+
+.services,
+.contact,
+.team,
+.portfolio {
+  padding: 70px 0;
+  text-align: center;
+  color: #555555;
 }
 
 /* header */
@@ -47,8 +62,6 @@ h3 {
 
 .header h1 {
   font-size: 48px;
-  text-transform: uppercase;
-  font-weight: bold;
   z-index: 10;
 }
 
@@ -81,7 +94,7 @@ h3 {
 }
 
 .button-start:hover span {
-  color: #c0301c;
+  color: tomato;
 }
 
 .button-start .wawe {
@@ -191,20 +204,13 @@ nav #marker {
 
 .menu-item a:hover {
   text-decoration: none;
-  color: #c0301c;
+  color: tomato;
   transition: 1s;
 }
 
 /* Section services*/
-.services {
-  padding-top: 100px;
-  padding-bottom: 70px;
-  text-align: center;
-  color: #555555;
-}
-
 .icon {
-  color: #c0301c;
+  color: tomato;
   font-size: 50px;
 }
 
@@ -225,7 +231,7 @@ nav #marker {
 }
 
 .services-box:hover .circle {
-  background: #c0301c;
+  background: tomato;
   border-radius: 1px solid #dddddd;
   transition: 1s;
 }
@@ -235,23 +241,20 @@ nav #marker {
   transition: 1s;
 }
 
-/*About*/
-.about {
+/*team*/
+.team {
   background: linear-gradient(to right, #dbdde1, #ffffff);
-  padding: 100px 0;
-  text-align: center;
-  color: #555555;
 }
 
-.about-inform {
-  padding-bottom: 70px;
+.team-inform {
+  padding: 50px 0;
 }
 
-.about-spase {
+.team-spase {
   padding: 30px 0 25px;
 }
 
-.about-card {
+.team-card {
   padding: 5px;
 }
 
@@ -299,7 +302,6 @@ nav #marker {
 	font-family: Poppins;
 	color: #fff;
 	text-align: center;
-	text-transform: uppercase;
 	margin: 0;
 	padding: 10px 0;
 	position: absolute;
@@ -391,10 +393,112 @@ nav #marker {
 }
 
 /* portfolio ( buttons + image)*/
-.portfolio {
-  padding: 100px 0 70px;
+.portfolio-card{
+  margin-bottom: 25px;
+}
+
+.portfolio-box {
+  box-shadow: 0 5px 10px rgba(0,0,0,.8);
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #000;
+}
+
+.portfolio-box::before,
+.portfolio-box::after
+ {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  transition: 0.5s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.portfolio-box::before {
+  border-top: 2px solid tomato;
+  border-bottom: 2px solid tomato;
+  transform: scaleX(0);
+}
+
+.portfolio-box::after {
+  border-left: 2px solid tomato;
+  border-right: 2px solid tomato;
+  transition: 0.5s;
+  transform: scaleY(0);
+}
+
+.portfolio-box:hover::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.portfolio-box:hover::after {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.portfolio-box img {
+  transition: 0.5s;
+}
+
+.portfolio-box:hover img {
+  opacity: .2;
+  transform: scale(1.2);
+}
+
+.portfolio-text {
+  display: none;
+}
+
+.portfolio h4{
+  margin: 0;
+  padding: 0;
+  color: white;
+  transition: 0.5s;
+  font-weight: bold;
+  transform: translateY(-50px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.portfolio p {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+  font-weight: bold;
+  transform: translateY(50px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.portfolio-text:hover h4,
+.portfolio-text:hover p {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+div[filter]:hover .portfolio-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: tomato;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  left: 0;
+  z-index: 3;
   text-align: center;
-  color: #555555;
 }
 
 .button {
@@ -412,34 +516,12 @@ nav #marker {
 .portfolio button:hover,
 .focused {
   background: transparent;
-  color: #c0301c;
+  color: tomato;
   cursor: pointer;
 }
 
 .portfolio img {
-  max-width: 100%;
-  margin-bottom: 30px;
-}
-
-div[filter]:hover img {
-  filter: brightness(50%);
-  transition: 0.3s;
-  color: #c4645b;
-}
-
-.portfolio-text {
-  display: none;
-}
-
-div[filter]:hover .portfolio-text {
-  display: block;
   width: 100%;
-  color: #fff;
-  position: absolute;
-  top: 40%;
-  left: 0;
-  z-index: 3;
-  text-align: center;
 }
 
 /*section touch*/
@@ -514,36 +596,7 @@ div[filter]:hover .portfolio-text {
 
 .blog-elem:hover a, .blog-elem:hover h4 {
   text-decoration: none;
-  color: #c0301c;
-}
-
-/* section media*/
-.about2 {
-  color: black;
-  padding-bottom: 500px;
-  background-color: green;
-}
-
-.media-text {
-  text-align: center;
-  font-style: italic;
-  color: #555555;
-}
-
-.media-text h4 {
-  font-size: 18px;
-  padding-bottom: 40px;
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
-}
-
-.media-text p {
-  font-size: 20px;
-  font-family: 'Roboto Slab', serif;
-}
-
-#media img {
-  padding: 0 0 70px 50px;
+  color: tomato;
 }
 
 /* slider */
@@ -553,6 +606,29 @@ div[filter]:hover .portfolio-text {
     text-align: center;
     color: #555555;
 }
+
+.slider-text {
+  text-align: center;
+  font-style: italic;
+  color: #555555;
+}
+
+.slider-text h4 {
+  font-size: 18px;
+  padding-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+}
+
+.slider-text p {
+  font-size: 20px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.slider img {
+  padding: 0 0 70px 50px;
+}
+
 
 /* section contact*/
 .contact-block {
@@ -634,12 +710,12 @@ div[filter]:hover .portfolio-text {
 
 /*footer*/
 .footer {
-  padding: 70px 0;
+  padding: 70px 0 60px;
   background-color: #222020;
 }
 
 .footer-text {
-  padding-top: 10px;
+  padding-top: 35px;
   color: white;
   text-align: center;
   font-weight: normal;
