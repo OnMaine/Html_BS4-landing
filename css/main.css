@@ -38,10 +38,15 @@ h3 {
 .services,
 .contact,
 .team,
-.portfolio {
+.portfolio,
+.blog {
   padding: 70px 0;
   text-align: center;
   color: #555555;
+}
+
+.blog {
+  padding-bottom: 0;
 }
 
 /* header */
@@ -541,15 +546,11 @@ div[filter]:hover .portfolio-text {
 }
 
 /* section blog*/
-.blog {
-  padding: 100px 0;
-}
-
 .blog-head {
   text-align: center;
 }
 
-.blog-elem {
+.blog-card {
   text-align: left;
   padding-bottom: 40px;
   margin-bottom: 40px;
@@ -586,7 +587,7 @@ div[filter]:hover .portfolio-text {
   color: #555555;
 }
 
-.more {
+.blog-read {
   font-size: 13px;
   font-family: 'Roboto', sans-serif;
   color: #555555;
@@ -594,7 +595,7 @@ div[filter]:hover .portfolio-text {
   font-weight: bold;
 }
 
-.blog-elem:hover a, .blog-elem:hover h4 {
+.blog-read:hover {
   text-decoration: none;
   color: tomato;
 }
@@ -827,7 +828,7 @@ div[filter]:hover .portfolio-text {
     font-size: 20px;
   }
 
-  .blog-item {
+  .blog-segment {
     margin-bottom: 20px;
   }
 }
