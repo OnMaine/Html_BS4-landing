@@ -282,7 +282,7 @@ nav #marker {
 
 .img-wrapper img
 {
-	height: 370px;
+	height: 350px;
 	width: 270px;
 	filter: grayscale(100%);
 	transition: 2s;
@@ -544,6 +544,14 @@ div[filter]:hover .portfolio-text {
 
 #media img {
   padding: 0 0 70px 50px;
+}
+
+/* slider */
+.slider {
+    background: linear-gradient(to right, #dbdde1, #ffffff);
+    padding: 50px 0;
+    text-align: center;
+    color: #555555;
 }
 
 /* section contact*/
